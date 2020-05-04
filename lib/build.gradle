@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven {
+        name "Github_Packages"
+        url "https://maven.pkg.github.com/leoacevedo/mvnrepo"
+        credentials {
+            username = System.getenv("USERNAME")
+            password = System.getenv("TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.leo.dummy:dummy-library:0.4.0'
+}
