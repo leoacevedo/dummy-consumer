@@ -12,8 +12,8 @@ repositories {
         name "Github_Packages"
         url "https://maven.pkg.github.com/leoacevedo/mvnrepo"
         credentials {
-            username = System.getenv("USERNAME")
-            password = System.getenv("TOKEN")
+            username = System.getenv("GITHUB_USERNAME")
+            password = System.getenv("GITHUB_TOKEN")
         }
     }
 }
